@@ -71,6 +71,12 @@ class Calculator:
             self.number_entry.delete(0, "end")
  
     #aq davamateb AC it washlas ...
+    #damatda warmatebit
+    def dlt_button_press(self):
+        print("deletes daewira")
+        self.calc_value=0.0
+        solution=0
+        self.number_entry.delete(0, "end")
         
         
     def equal_button_press(self):
@@ -99,7 +105,7 @@ class Calculator:
     def __init__(self, root):
         self.entry_value = StringVar(root, value="")
         root.title("Calculator")
-        root.geometry("430x220")
+        root.geometry("310x130")
         root.resizable(width=False, height=False)
         style = ttk.Style()
         style.configure("TButton",
@@ -158,3 +164,9 @@ root = Tk()
 calc = Calculator(root)
  
 #root.mainloop()
+
+
+# 1) AC gilaki ar mushaobs  // gasworda
+# 2) dizainis cota galamazeba sheidzleba
+# 3) davamato pesvis amogeba an rame msgavsi ...
+# mxolod bolo or ricxvs vamaxsovrebineb sheidzleba amazec dapiqreba magram ewvi mepareba :D
