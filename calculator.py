@@ -1,5 +1,7 @@
+# -*- coding: utf-8 -*-
 from tkinter import *
 from tkinter import ttk
+import math
  
 class Calculator:
     calc_value = 0.0
@@ -86,6 +88,13 @@ class Calculator:
         self.number_entry.delete(0, "end")
         self.number_entry.insert(0, solution)
         
+    #davamate pesvis amogeba    
+    def pesvi_button_press(self):
+        print("pesvis funqcia gaeshva")
+        solution=math.sqrt(int(self.entry_value.get()))
+        self.number_entry.delete(0, "end")
+        self.number_entry.insert(0, solution)
+        
     def equal_button_press(self):
  
         # math gilakze daweris shemowmeba
@@ -168,6 +177,9 @@ class Calculator:
         
         # ----- 5th Row -----
         self.buttonx2 = ttk.Button(root, text="X^2", command=lambda: self.kvadrati_button_press()).grid(row=5, column=0)
+        self.buttonx1_2 = ttk.Button(root, text="√", command=lambda: self.pesvi_button_press()).grid(row=5, column=1)
+        
+        
         
         
 root = Tk()
