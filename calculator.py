@@ -84,14 +84,15 @@ class Calculator:
             
     def kvadrati_button_press(self):
         print("akvadratebis funqcia gaeshva")
-        solution=pow(int(self.entry_value.get()),2)
+        ricxvi=self.entry_value.get()
+        solution=pow(float(ricxvi),2)
         self.number_entry.delete(0, "end")
         self.number_entry.insert(0, solution)
         
     #davamate pesvis amogeba    
     def pesvi_button_press(self):
         print("pesvis funqcia gaeshva")
-        solution=math.sqrt(int(self.entry_value.get()))
+        solution=math.sqrt(float(self.entry_value.get()))
         self.number_entry.delete(0, "end")
         self.number_entry.insert(0, solution)
         
@@ -190,6 +191,5 @@ calc = Calculator(root)
 
 
 # 1) AC gilaki ar mushaobs  // gasworda
-# 2) dizainis cota galamazeba sheidzleba //magram ragac urevs :d gaurkveveli dorit gacherda
-# 3) davamato pesvis amogeba an rame msgavsi ...//akavdrateba + ,
+# 2) davamato pesvis amogeba an rame msgavsi ...//akavdrateba + , pesvic davamate
 # mxolod bolo or ricxvs vamaxsovrebineb sheidzleba amazec dapiqreba magram ewvi mepareba :D
