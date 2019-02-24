@@ -78,6 +78,13 @@ class Calculator:
         solution=0
         self.number_entry.delete(0, "end")
         
+    #davamate akvadrateba
+            
+    def kvadrati_button_press(self):
+        print("akvadratebis funqcia gaeshva")
+        solution=pow(int(self.entry_value.get()),2)
+        self.number_entry.delete(0, "end")
+        self.number_entry.insert(0, solution)
         
     def equal_button_press(self):
  
@@ -105,7 +112,7 @@ class Calculator:
     def __init__(self, root):
         self.entry_value = StringVar(root, value="")
         root.title("Calculator")
-        root.geometry("310x130")
+        root.geometry("310x150")
         root.resizable(width=False, height=False)
         style = ttk.Style()
         style.configure("TButton",
@@ -159,6 +166,10 @@ class Calculator:
  
         self.button_sub = ttk.Button(root, text="-", command=lambda: self.math_button_press('-')).grid(row=4, column=3)
         
+        # ----- 5th Row -----
+        self.buttonx2 = ttk.Button(root, text="X^2", command=lambda: self.kvadrati_button_press()).grid(row=5, column=0)
+        
+        
 root = Tk()
  
 calc = Calculator(root)
@@ -167,6 +178,6 @@ calc = Calculator(root)
 
 
 # 1) AC gilaki ar mushaobs  // gasworda
-# 2) dizainis cota galamazeba sheidzleba
-# 3) davamato pesvis amogeba an rame msgavsi ...
+# 2) dizainis cota galamazeba sheidzleba //magram ragac urevs :d gaurkveveli dorit gacherda
+# 3) davamato pesvis amogeba an rame msgavsi ...//akavdrateba + ,
 # mxolod bolo or ricxvs vamaxsovrebineb sheidzleba amazec dapiqreba magram ewvi mepareba :D
